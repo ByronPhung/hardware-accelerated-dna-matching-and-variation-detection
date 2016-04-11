@@ -69,6 +69,22 @@ void Sequence::StoreSequence(char inputSequence[]) {
 }
 
 //=============================================================================
+//  Name         : GetSequence
+//  Usage        : sequence.GetSequence(sequenceArray);
+//  Description  : Returns the sequence to the sequenceArray pointer.
+//  Parameters   : sequenceArray - Pointer to sequence array
+//  Global Data  : <None>
+//  Return Value : <None>
+//==============================================================================
+
+void Sequence::GetSequence(char* sequenceArray) {
+	// Return the sequence via the sequenceArray pointer.
+	for (int i = 0; i < size; i++) {
+		sequenceArray[i] = sequence[i];
+	}
+}
+
+//=============================================================================
 //  Name         : PrintSequence
 //  Usage        : sequence.PrintSequence();
 //  Description  : Prints the stored sequence.
@@ -92,7 +108,7 @@ void Sequence::PrintSequence() {
 //  Return Value : Returns the size of the stored sequence.
 //==============================================================================
 
-unsigned int Sequence::GetSize() {
+int Sequence::GetSize() {
 	return size;
 }
 
@@ -105,15 +121,15 @@ unsigned int Sequence::GetSize() {
 //  Return Value : Returns the number of keys found.
 //==============================================================================
 
-unsigned int Sequence::Search(char key[], int keySize) {
+int Sequence::Search(char key[], int keySize) {
 	// Track the number of keys found in this search.
 	int numKeysFound = 0;
 
 	// Search in increments of the key size.
-	for (unsigned int i = 0; i <= size - keySize; i++) {
+	for (int i = 0; i <= size - keySize; i++) {
 		// Declare j outside of the next for loop to determine if there was a
 		// key match.
-		unsigned int j = 0;
+		int j = 0;
 
 		// Check if the key matches the current keySize-sized sequence word.
 		for (j = 0; j < keySize; j++) {
@@ -131,4 +147,84 @@ unsigned int Sequence::Search(char key[], int keySize) {
 
 	// Return the number of keys found.
 	return numKeysFound;
+}
+
+//=============================================================================
+//  Name         : Compare
+//  Usage        : bool detectedVariations = sequence.Compare(compareSequence);
+//  Description  : Compares the input sequence with the current sequence.
+//  Parameters   : compareSequence - Sequence to compare current sequence with
+//  Global Data  : <None>
+//  Return Value : Returns true if there are variations. Otherwise, returns
+//                 false.
+//==============================================================================
+
+bool Sequence::Compare(Sequence compareSequence) {
+	// Track if variations are found.
+	bool foundVariations = false;
+
+	// Get the compare sequence.
+	char* compareSequenceArray = new char[compareSequence.GetSize()];
+	compareSequence.GetSequence(compareSequenceArray);
+
+	// Cycle through each character in the sequences.
+	for (int i = 0; i < size; i++) {
+		if (sequence[i] != compareSequenceArray[i]) {
+			foundVariations = true;
+		}
+	}
+
+	// Return if variations are found.
+	return foundVariations;
+}
+
+//=============================================================================
+//  Name         : PrintVariations
+//  Usage        : sequence.PrintVariations(compareSequence);
+//  Description  : Prints the variations between sequence & compareSequence.
+//  Parameters   : compareSequence - Sequence to compare current sequence with
+//  Global Data  : <None>
+//  Return Value : <None>
+//==============================================================================
+
+void Sequence::PrintVariations(Sequence compareSequence) {
+	// Track when a variation is found so that brackets can be used.
+	bool foundVariation = false;
+
+	// Get the compare sequence.
+	char* compareSequenceArray = new char[compareSequence.GetSize()];
+	compareSequence.GetSequence(compareSequenceArray);
+	
+	// Cycle through each character in the sequences.
+	for (int i = 0; i < size; i++) {
+		// If the current character doesn't match, then check if this is part
+		// of an ongoing variation.
+		if (sequence[i] != compareSequenceArray[i]) {
+			// If there is no ongoing variation, then indicate it and start
+			// a pair of brackets.
+			if (foundVariation == false) {
+				foundVariation = true;
+				cout << "[";
+			}
+		}
+
+		// Otherwise, check if an ongoing variation is ending.
+		else {
+			// If an ongoing variation is ending, then indicate it and complete
+			// the pair of brackets.
+			if (foundVariation) {
+				foundVariation = false;
+				cout << "]";
+			}
+		}
+
+		// Print out the current sequence character.
+		cout << compareSequenceArray[i];
+
+		// If this is the last character and there is an ongoing variation,
+		// then close the brackets.
+		if ((i == size - 1) && foundVariation) {
+			cout << "]";
+		}
+	}
 }
