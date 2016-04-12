@@ -1,93 +1,479 @@
-// DnaMatchingAndVariationDetection.cpp : Defines the entry point for the console application.
-//
-
 #include "stdafx.h"
 #include <iostream>
 #include "Sequence.h"
 
 using namespace std;
 
+//=============================================================================
+//  TEST CASE SWITCHES
+//=============================================================================
+
+#define ENABLED 1
+#define DISABLED 0
+
+#define TESTCASE_SEQUENCE_CPP_SEARCH_WITHVALIDTHREECHARACTERKEY_WITHDEFAULTSEQUENCESIZE_EXPECTTWOKEYSFOUND ENABLED
+#define TESTCASE_SEQUENCE_CPP_SEARCH_WITHINVALIDTHREECHARACTERKEY_WITHDEFAULTSEQUENCESIZE_EXPECTZEROKEYSFOUND ENABLED
+#define TESTCASE_SEQUENCE_CPP_SEARCH_WITHVALIDTHREECHARACTERKEY_WITHSPECIFIEDSEQUENCESIZE_EXPECTTHIRTEENKEYSFOUND ENABLED
+#define TESTCASE_SEQUENCE_CPP_SEARCH_WITHINVALIDFOURCHARACTERKEY_WITHSPECIFIEDSEQUENCESIZE_EXPECTZEROKEYSFOUND ENABLED
+#define TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTSAMECOMPARESEQUENCE_WITHDEFAULTSEQUENCESIZE_EXPECTNOVARIATIONS ENABLED
+#define TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTDIFFERENTCOMPARESEQUENCE_WITHDEFAULTSEQUENCESIZE_EXPECTVARIATIONS ENABLED
+#define TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTSAMECOMPARESEQUENCE_WITHSPECIFIEDSEQUENCESIZE_EXPECTNOVARIATIONS ENABLED
+#define TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTDIFFERENTCOMPARESEQUENCE_WITHSPECIFIEDSEQUENCESIZE_EXPECTVARIATIONS ENABLED
+
+//=============================================================================
+//  TEST HELPERS
+//=============================================================================
+
+// Sequences
+char SEQUENCE_DEFAULT[33] = "ACAAGATGCCATTGTCCCCCGGCCTCCTGCTG";
+char SEQUENCE_DEFAULT_VARIATIONS[33] = "ACAAGATGCCATTAGCCCCCGGCCTCCTGCTC";
+char SEQUENCE_SPECIFIED[369] = "ACAAGATGCCATTGTCCCCCGGCCTCCTGCTGCTGCTGCTCTCCGGGGCCACGGCCACCGCTGCCCTGCCCCTGGAGGGTGGCCCCACCGGCCGAGACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCCTCCTGACTTTCCTCGCTTGGTGGTTTGAGTGGACCTCCCAGGCCAGTGCCGGGCCCCTCATAGGAGAGGAAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCCCAGCAATCCGCGCGCCGGGACAGAATGCCCTGCAGGAACTTCTTCTGGAAGACCTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAGTTTAATTACAGACCTGAA";
+char SEQUENCE_SPECIFIED_VARIATIONS[369] = "ACAAGCAGCCATTGTCCCCCGGCCTCCTGCTGCTGCTGCTCTCCGGCCCCACGGCCACCGCTGCCCTGCCCCTGGAGGGTGGCCCCACCGGCCGAGACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCCTCCTGACTTTCCTCGCTTGGTGGTTTGAGTGGAAATCCCAGGCCAGTGCCGGGCCCCTCATAGGAGAGGAAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCCCAGCAATCCGCGCGCCGGGACAGAATGCCCTGCAGGAACTTCTTCTGGAAGACCTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAGTTTAAAAACAGACCTGAA";
+
+// Sequence Sizes
+int SEQUENCE_SIZE_SPECIFIED = 368;
+
+// Search Keys
+char SEARCH_KEY_THREE_CHARACTERS_VALID[4] = "TGC";
+char SEARCH_KEY_THREE_CHARACTERS_INVALID_DEFAULT[4] = "AAA";
+char SEARCH_KEY_FOUR_CHARACTERS_INVALID_LONG[5] = "TTTT";
+
+// Search Key Sizes
+int SEARCH_KEY_SIZE_THREE_CHARACTERS = 3;
+int SEARCH_KEY_SIZE_FOUR_CHARACTERS = 4;
+
+//=============================================================================
+//  TEST CASE PROTOTYPES
+//=============================================================================
+
+void TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithDefaultSequenceSize_ExpectTwoKeysFound();
+void TestCase_Sequence_cpp_Search_WithInvalidThreeCharacterKey_WithDefaultSequenceSize_ExpectZeroKeysFound();
+void TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithSpecifiedSequenceSize_ExpectThirteenKeysFound();
+void TestCase_Sequence_cpp_Search_WithInvalidFourCharacterKey_WithSpecifiedSequenceSize_ExpectZeroKeysFound();
+void TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithDefaultSequenceSize_ExpectNoVariations();
+void TestCase_Sequence_cpp_Compare_AgainstDifferentCompareSequence_WithDefaultSequenceSize_ExpectVariations();
+void TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithSpecifiedSequenceSize_ExpectNoVariations();
+void TestCase_Sequence_cpp_CompareAgainstDifferentCompareSequence_WithSpecifiedSequenceSize_ExpectVariations();
+
+//=============================================================================
+//  MAIN EXECUTION
+//=============================================================================
+
 int _tmain(int argc, _TCHAR* argv[])
 {
-	// Define the sample sequences.
-	char sequence1[33] = "ACAAGATGCCATTGTCCCCCGGCCTCCTGCTG";
-	char sequence2[17] = "CTGCTGCTCTCCGGGG";
-	char sequence3[33] = "ACAAGATGCCATTAGCCCCCGGCCTCCTGCTC";
-	char sequence4[369] = "ACAAGATGCCATTGTCCCCCGGCCTCCTGCTGCTGCTGCTCTCCGGGGCCACGGCCACCGCTGCCCTGCCCCTGGAGGGTGGCCCCACCGGCCGAGACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCCTCCTGACTTTCCTCGCTTGGTGGTTTGAGTGGACCTCCCAGGCCAGTGCCGGGCCCCTCATAGGAGAGGAAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCCCAGCAATCCGCGCGCCGGGACAGAATGCCCTGCAGGAACTTCTTCTGGAAGACCTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAGTTTAATTACAGACCTGAA";
-	char sequence5[369] = "ACAAGCAGCCATTGTCCCCCGGCCTCCTGCTGCTGCTGCTCTCCGGCCCCACGGCCACCGCTGCCCTGCCCCTGGAGGGTGGCCCCACCGGCCGAGACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCCTCCTGACTTTCCTCGCTTGGTGGTTTGAGTGGAAATCCCAGGCCAGTGCCGGGCCCCTCATAGGAGAGGAAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCCCAGCAATCCGCGCGCCGGGACAGAATGCCCTGCAGGAACTTCTTCTGGAAGACCTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAGTTTAAAAACAGACCTGAA";
+#if (TESTCASE_SEQUENCE_CPP_SEARCH_WITHVALIDTHREECHARACTERKEY_WITHDEFAULTSEQUENCESIZE_EXPECTTWOKEYSFOUND)
+	TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithDefaultSequenceSize_ExpectTwoKeysFound();
+#endif
 
-	// Create the necessary Sequence objects.
-	Sequence s1, s2, s3, s4, s5;
+#if (TESTCASE_SEQUENCE_CPP_SEARCH_WITHINVALIDTHREECHARACTERKEY_WITHDEFAULTSEQUENCESIZE_EXPECTZEROKEYSFOUND)
+	TestCase_Sequence_cpp_Search_WithInvalidThreeCharacterKey_WithDefaultSequenceSize_ExpectZeroKeysFound();
+#endif
 
-	// Initialize the Sequence objects.
-	s1.Initialize(sequence1);
-	s2.Initialize(sequence2, 16);
-	s3.Initialize(sequence3);
-	s4.Initialize(sequence4, 368);
-	s5.Initialize(sequence5, 368);
+#if (TESTCASE_SEQUENCE_CPP_SEARCH_WITHVALIDTHREECHARACTERKEY_WITHSPECIFIEDSEQUENCESIZE_EXPECTTHIRTEENKEYSFOUND)
+	TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithSpecifiedSequenceSize_ExpectThirteenKeysFound();
+#endif
 
-	// Define search keys.
-	const int SEARCH_KEY_SIZE_1 = 3;
-	char searchKey1[SEARCH_KEY_SIZE_1 + 1] = "CCC";
-	char searchKey2[SEARCH_KEY_SIZE_1 + 1] = "AAA";
-	const int SEARCH_KEY_SIZE_2 = 8;
-	char searchKey3[SEARCH_KEY_SIZE_2 + 1] = "CTCCGGGG";
-	char searchKey4[SEARCH_KEY_SIZE_2 + 1] = "CTGCTGCG";
-	const int SEARCH_KEY_SIZE_3 = 16;
-	char searchKey5[SEARCH_KEY_SIZE_3 + 1] = "ACAAGATGCCATTGTC";
-	char searchKey6[SEARCH_KEY_SIZE_3 + 1] = "AAAAAAAAAAAAAAAA";
+#if (TESTCASE_SEQUENCE_CPP_SEARCH_WITHINVALIDFOURCHARACTERKEY_WITHSPECIFIEDSEQUENCESIZE_EXPECTZEROKEYSFOUND)
+	TestCase_Sequence_cpp_Search_WithInvalidFourCharacterKey_WithSpecifiedSequenceSize_ExpectZeroKeysFound();
+#endif
 
-	// Test sequence 1 (default sequence size) and search functionality.
-	cout << "Sequence 1: \""; s1.PrintSequence(); cout << "\"" << endl;
-	cout << "    - Size: " << s1.GetSize() << endl;
-	cout << "Search Key: " << searchKey1 << endl;
-	cout << "    - Keys Found: " << s1.Search(searchKey1, SEARCH_KEY_SIZE_1) << endl;
-	cout << "Search Key: " << searchKey2 << endl;
-	cout << "    - Keys Found: " << s1.Search(searchKey2, SEARCH_KEY_SIZE_1) << endl << endl;
+#if (TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTSAMECOMPARESEQUENCE_WITHDEFAULTSEQUENCESIZE_EXPECTNOVARIATIONS)
+	TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithDefaultSequenceSize_ExpectNoVariations();
+#endif
 
-	// Test sequence 2 (specified sequence size) and search functionality.
-	cout << "Sequence 2: \""; s2.PrintSequence(); cout << "\"" << endl;
-	cout << "    - Size: " << s2.GetSize() << endl;
-	cout << "Search Key: " << searchKey3 << endl;
-	cout << "    - Keys Found: " << s2.Search(searchKey3, SEARCH_KEY_SIZE_2) << endl;
-	cout << "Search Key: " << searchKey4 << endl;
-	cout << "    - Keys Found: " << s2.Search(searchKey4, SEARCH_KEY_SIZE_2) << endl << endl;
+#if (TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTDIFFERENTCOMPARESEQUENCE_WITHDEFAULTSEQUENCESIZE_EXPECTVARIATIONS)
+	TestCase_Sequence_cpp_Compare_AgainstDifferentCompareSequence_WithDefaultSequenceSize_ExpectVariations();
+#endif
 
-	// Test sequence 1 (default sequence size) and compare functionality.
-	cout << "Sequence 1: \""; s1.PrintSequence(); cout << "\"" << endl;
-	cout << "    - Size: " << s1.GetSize() << endl;
-	cout << "Compared with Sequence 1: \""; s1.PrintSequence(); cout << "\"" << endl;
-	cout << "    - Variations: " << (s1.Compare(s1) ? "TRUE" : "FALSE") << endl;
-	if (s1.Compare(s1)) {
-		cout << "                  "; s1.PrintVariations(s1); cout << endl;
-	}
-	cout << "Compared with Sequence 3: \""; s3.PrintSequence(); cout << "\"" << endl;
-	cout << "    - Variations: " << (s1.Compare(s3) ? "TRUE" : "FALSE") << endl;
-	if (s1.Compare(s3)) {
-		cout << "                  "; s1.PrintVariations(s3); cout << endl << endl;
-	}
+#if (TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTSAMECOMPARESEQUENCE_WITHSPECIFIEDSEQUENCESIZE_EXPECTNOVARIATIONS)
+	TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithSpecifiedSequenceSize_ExpectNoVariations();
+#endif
 
-	// Test sequence 4 (large sequence size) and search functionality.
-	cout << "Sequence 4: \""; s4.PrintSequence(); cout << "\"" << endl;
-	cout << "    - Size: " << s4.GetSize() << endl;
-	cout << "Search Key: " << searchKey5 << endl;
-	cout << "    - Keys Found: " << s4.Search(searchKey5, SEARCH_KEY_SIZE_3) << endl;
-	cout << "Search Key: " << searchKey6 << endl;
-	cout << "    - Keys Found: " << s4.Search(searchKey6, SEARCH_KEY_SIZE_3) << endl << endl;
-
-	// Test sequence 4 (large sequence size) and compare functionality.
-	cout << "Sequence 4: \""; s4.PrintSequence(); cout << "\"" << endl;
-	cout << "    - Size: " << s4.GetSize() << endl;
-	cout << "Compared with Sequence 4: \""; s4.PrintSequence(); cout << "\"" << endl;
-	cout << "    - Variations: " << (s1.Compare(s4) ? "TRUE" : "FALSE") << endl;
-	if (s4.Compare(s4)) {
-		cout << "                  "; s4.PrintVariations(s4); cout << endl;
-	}
-	cout << "Compared with Sequence 5: \""; s5.PrintSequence(); cout << "\"" << endl;
-	cout << "    - Variations: " << (s4.Compare(s5) ? "TRUE" : "FALSE") << endl;
-	if (s4.Compare(s5)) {
-		cout << "                  "; s4.PrintVariations(s5); cout << endl << endl;
-	}
+#if (TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTDIFFERENTCOMPARESEQUENCE_WITHSPECIFIEDSEQUENCESIZE_EXPECTVARIATIONS)
+	TestCase_Sequence_cpp_CompareAgainstDifferentCompareSequence_WithSpecifiedSequenceSize_ExpectVariations();
+#endif
 
 	return 0;
 }
+
+#if (TESTCASE_SEQUENCE_CPP_SEARCH_WITHVALIDTHREECHARACTERKEY_WITHDEFAULTSEQUENCESIZE_EXPECTTWOKEYSFOUND)
+void TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithDefaultSequenceSize_ExpectTwoKeysFound()
+{
+	cout << "BEGIN TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithDefaultSequenceSize_ExpectTwoKeysFound" << endl << endl;
+
+	// Initialization
+	Sequence sequence;
+	sequence.Initialize(SEQUENCE_DEFAULT);
+	cout << "// Initialization" << endl;
+	cout << "sequence = "; sequence.PrintSequence(); cout << endl;
+	cout << endl;
+
+	// Test Implementation
+	cout << "// Test Implementation" << endl;
+	cout << "search key = " << SEARCH_KEY_THREE_CHARACTERS_VALID << endl;
+	cout << endl;
+
+	// Expected Output
+	int expectedKeysFound = 2;
+	cout << "// Expected Output" << endl;
+	cout << "keys found: " << expectedKeysFound << endl;
+	cout << endl;
+
+	// Actual Output
+	int actualKeysFound = sequence.Search(SEARCH_KEY_THREE_CHARACTERS_VALID, SEARCH_KEY_SIZE_THREE_CHARACTERS);
+	cout << "// Actual Output" << endl;
+	cout << "keys found: " << actualKeysFound << endl;
+	cout << endl;
+
+	// Test Case Status
+	cout << "// Test Case Status" << endl;
+	cout << "status = ";
+	if (actualKeysFound == expectedKeysFound)
+	{
+		cout << "PASS";
+	}
+
+	else
+	{
+		cout << "FAIL";
+	}
+	cout << endl;
+
+	cout << endl << "END TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithDefaultSequenceSize_ExpectTwoKeysFound" << endl << endl;
+}
+#endif
+
+#if (TESTCASE_SEQUENCE_CPP_SEARCH_WITHINVALIDTHREECHARACTERKEY_WITHDEFAULTSEQUENCESIZE_EXPECTZEROKEYSFOUND)
+void TestCase_Sequence_cpp_Search_WithInvalidThreeCharacterKey_WithDefaultSequenceSize_ExpectZeroKeysFound()
+{
+	cout << "BEGIN TestCase_Sequence_cpp_Search_WithInvalidThreeCharacterKey_WithDefaultSequenceSize_ExpectZeroKeysFound" << endl << endl;
+
+	// Initialization
+	Sequence sequence;
+	sequence.Initialize(SEQUENCE_DEFAULT);
+	cout << "// Initialization" << endl;
+	cout << "sequence = "; sequence.PrintSequence(); cout << endl;
+	cout << endl;
+
+	// Test Implementation
+	cout << "// Test Implementation" << endl;
+	cout << "search key = " << SEARCH_KEY_THREE_CHARACTERS_INVALID_DEFAULT << endl;
+	cout << endl;
+
+	// Expected Output
+	int expectedKeysFound = 0;
+	cout << "// Expected Output" << endl;
+	cout << "keys found: " << expectedKeysFound << endl;
+	cout << endl;
+
+	// Actual Output
+	int actualKeysFound = sequence.Search(SEARCH_KEY_THREE_CHARACTERS_INVALID_DEFAULT, SEARCH_KEY_SIZE_THREE_CHARACTERS);
+	cout << "// Actual Output" << endl;
+	cout << "keys found: " << actualKeysFound << endl;
+	cout << endl;
+
+	// Test Case Status
+	cout << "// Test Case Status" << endl;
+	cout << "status = ";
+	if (actualKeysFound == expectedKeysFound)
+	{
+		cout << "PASS";
+	}
+
+	else
+	{
+		cout << "FAIL";
+	}
+	cout << endl;
+
+	cout << endl << "END TestCase_Sequence_cpp_Search_WithInvalidThreeCharacterKey_WithDefaultSequenceSize_ExpectZeroKeysFound" << endl << endl;
+}
+#endif
+
+#if (TESTCASE_SEQUENCE_CPP_SEARCH_WITHVALIDTHREECHARACTERKEY_WITHSPECIFIEDSEQUENCESIZE_EXPECTTHIRTEENKEYSFOUND)
+void TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithSpecifiedSequenceSize_ExpectThirteenKeysFound()
+{
+	cout << "BEGIN TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithSpecifiedSequenceSize_ExpectThirteenKeysFound" << endl << endl;
+
+	// Initialization
+	Sequence sequence;
+	sequence.Initialize(SEQUENCE_SPECIFIED, SEQUENCE_SIZE_SPECIFIED);
+	cout << "// Initialization" << endl;
+	cout << "sequence = "; sequence.PrintSequence(); cout << endl;
+	cout << endl;
+
+	// Test Implementation
+	cout << "// Test Implementation" << endl;
+	cout << "search key = " << SEARCH_KEY_THREE_CHARACTERS_VALID << endl;
+	cout << endl;
+
+	// Expected Output
+	int expectedKeysFound = 13;
+	cout << "// Expected Output" << endl;
+	cout << "keys found: " << expectedKeysFound << endl;
+	cout << endl;
+
+	// Actual Output
+	int actualKeysFound = sequence.Search(SEARCH_KEY_THREE_CHARACTERS_VALID, SEARCH_KEY_SIZE_THREE_CHARACTERS);
+	cout << "// Actual Output" << endl;
+	cout << "keys found: " << actualKeysFound << endl;
+	cout << endl;
+
+	// Test Case Status
+	cout << "// Test Case Status" << endl;
+	cout << "status = ";
+	if (actualKeysFound == expectedKeysFound)
+	{
+		cout << "PASS";
+	}
+
+	else
+	{
+		cout << "FAIL";
+	}
+	cout << endl;
+
+	cout << endl << "END TestCase_Sequence_cpp_Search_WithValidThreeCharacterKey_WithSpecifiedSequenceSize_ExpectThirteenKeysFound" << endl << endl;
+}
+#endif
+
+#if (TESTCASE_SEQUENCE_CPP_SEARCH_WITHINVALIDFOURCHARACTERKEY_WITHSPECIFIEDSEQUENCESIZE_EXPECTZEROKEYSFOUND)
+void TestCase_Sequence_cpp_Search_WithInvalidFourCharacterKey_WithSpecifiedSequenceSize_ExpectZeroKeysFound()
+{
+	cout << "BEGIN TestCase_Sequence_cpp_Search_WithInvalidFourCharacterKey_WithSpecifiedSequenceSize_ExpectZeroKeysFound" << endl << endl;
+
+	// Initialization
+	Sequence sequence;
+	sequence.Initialize(SEQUENCE_SPECIFIED, SEQUENCE_SIZE_SPECIFIED);
+	cout << "// Initialization" << endl;
+	cout << "sequence = "; sequence.PrintSequence(); cout << endl;
+	cout << endl;
+
+	// Test Implementation
+	cout << "// Test Implementation" << endl;
+	cout << "search key = " << SEARCH_KEY_FOUR_CHARACTERS_INVALID_LONG << endl;
+	cout << endl;
+
+	// Expected Output
+	int expectedKeysFound = 0;
+	cout << "// Expected Output" << endl;
+	cout << "keys found: " << expectedKeysFound << endl;
+	cout << endl;
+
+	// Actual Output
+	int actualKeysFound = sequence.Search(SEARCH_KEY_FOUR_CHARACTERS_INVALID_LONG, SEARCH_KEY_SIZE_FOUR_CHARACTERS);
+	cout << "// Actual Output" << endl;
+	cout << "keys found: " << actualKeysFound << endl;
+	cout << endl;
+
+	// Test Case Status
+	cout << "// Test Case Status" << endl;
+	cout << "status = ";
+	if (actualKeysFound == expectedKeysFound)
+	{
+		cout << "PASS";
+	}
+
+	else
+	{
+		cout << "FAIL";
+	}
+	cout << endl;
+
+	cout << endl << "END TestCase_Sequence_cpp_Search_WithInvalidFourCharacterKey_WithSpecifiedSequenceSize_ExpectZeroKeysFound" << endl << endl;
+}
+#endif
+
+#if (TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTSAMECOMPARESEQUENCE_WITHDEFAULTSEQUENCESIZE_EXPECTNOVARIATIONS)
+void TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithDefaultSequenceSize_ExpectNoVariations()
+{
+	cout << "BEGIN TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithDefaultSequenceSize_ExpectNoVariations" << endl << endl;
+
+	// Initialization
+	Sequence sequence;
+	sequence.Initialize(SEQUENCE_DEFAULT);
+	cout << "// Initialization" << endl;
+	cout << "sequence = "; sequence.PrintSequence(); cout << endl;
+	cout << "compareSequence = "; sequence.PrintSequence(); cout << endl;
+	cout << endl;
+	
+	// Test Implementation
+	cout << "// Test Implementation" << endl;
+	cout << "print variations (variations marked by brackets) = "; sequence.PrintVariations(sequence); cout << endl;
+	cout << endl;
+
+	// Expected Output
+	bool expectedVariations = false;
+	cout << "// Expected Output" << endl;
+	cout << "variations = " << (expectedVariations ? "TRUE" : "FALSE") << endl;
+	cout << endl;
+
+	// Actual Output
+	bool actualVariations = sequence.Compare(sequence);
+	cout << "// Actual Output" << endl;
+	cout << "variations = " << (actualVariations ? "TRUE" : "FALSE") << endl;
+	cout << endl;
+
+	// Test Case Status
+	cout << "// Test Case Status" << endl;
+	cout << "status = ";
+	if (actualVariations == expectedVariations)
+	{
+		cout << "PASS";
+	}
+
+	else
+	{
+		cout << "FAIL";
+	}
+	cout << endl;
+
+	cout << endl << "END TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithDefaultSequenceSize_ExpectNoVariations" << endl << endl;
+}
+#endif
+
+#if (TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTDIFFERENTCOMPARESEQUENCE_WITHDEFAULTSEQUENCESIZE_EXPECTVARIATIONS)
+void TestCase_Sequence_cpp_Compare_AgainstDifferentCompareSequence_WithDefaultSequenceSize_ExpectVariations()
+{
+	cout << "BEGIN TestCase_Sequence_cpp_Compare_AgainstDifferentCompareSequence_WithDefaultSequenceSize_ExpectVariations" << endl << endl;
+
+	// Initialization
+	Sequence sequence, compareSequence;
+	sequence.Initialize(SEQUENCE_DEFAULT);
+	compareSequence.Initialize(SEQUENCE_DEFAULT_VARIATIONS);
+	cout << "// Initialization" << endl;
+	cout << "sequence = "; sequence.PrintSequence(); cout << endl;
+	cout << "compareSequence = "; compareSequence.PrintSequence(); cout << endl;
+	cout << endl;
+
+	// Test Implementation
+	cout << "// Test Implementation" << endl;
+	cout << "print variations (variations marked by brackets) = "; sequence.PrintVariations(compareSequence); cout << endl;
+	cout << endl;
+
+	// Expected Output
+	bool expectedVariations = true;
+	cout << "// Expected Output" << endl;
+	cout << "variations = " << (expectedVariations ? "TRUE" : "FALSE") << endl;
+	cout << endl;
+
+	// Actual Output
+	bool actualVariations = sequence.Compare(compareSequence);
+	cout << "// Actual Output" << endl;
+	cout << "variations = " << (actualVariations ? "TRUE" : "FALSE") << endl;
+	cout << endl;
+
+	// Test Case Status
+	cout << "// Test Case Status" << endl;
+	cout << "status = ";
+	if (actualVariations == expectedVariations)
+	{
+		cout << "PASS";
+	}
+
+	else
+	{
+		cout << "FAIL";
+	}
+	cout << endl;
+
+	cout << endl << "END TestCase_Sequence_cpp_Compare_AgainstDifferentCompareSequence_WithDefaultSequenceSize_ExpectVariations" << endl << endl;
+}
+#endif
+
+#if (TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTSAMECOMPARESEQUENCE_WITHSPECIFIEDSEQUENCESIZE_EXPECTNOVARIATIONS)
+void TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithSpecifiedSequenceSize_ExpectNoVariations()
+{
+	cout << "BEGIN TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithSpecifiedSequenceSize_ExpectNoVariations" << endl << endl;
+
+	// Initialization
+	Sequence sequence;
+	sequence.Initialize(SEQUENCE_SPECIFIED, SEQUENCE_SIZE_SPECIFIED);
+	cout << "// Initialization" << endl;
+	cout << "sequence = "; sequence.PrintSequence(); cout << endl;
+	cout << "compareSequence = "; sequence.PrintSequence(); cout << endl;
+	cout << endl;
+
+	// Test Implementation
+	cout << "// Test Implementation" << endl;
+	cout << "print variations (variations marked by brackets) = "; sequence.PrintVariations(sequence); cout << endl;
+	cout << endl;
+
+	// Expected Output
+	bool expectedVariations = false;
+	cout << "// Expected Output" << endl;
+	cout << "variations = " << (expectedVariations ? "TRUE" : "FALSE") << endl;
+	cout << endl;
+
+	// Actual Output
+	bool actualVariations = sequence.Compare(sequence);
+	cout << "// Actual Output" << endl;
+	cout << "variations = " << (actualVariations ? "TRUE" : "FALSE") << endl;
+	cout << endl;
+
+	// Test Case Status
+	cout << "// Test Case Status" << endl;
+	cout << "status = ";
+	if (actualVariations == expectedVariations)
+	{
+		cout << "PASS";
+	}
+
+	else
+	{
+		cout << "FAIL";
+	}
+	cout << endl;
+
+	cout << endl << "END TestCase_Sequence_cpp_Compare_AgainstSameCompareSequence_WithSpecifiedSequenceSize_ExpectNoVariations" << endl << endl;
+}
+#endif
+
+#if (TESTCASE_SEQUENCE_CPP_COMPARE_AGAINSTDIFFERENTCOMPARESEQUENCE_WITHSPECIFIEDSEQUENCESIZE_EXPECTVARIATIONS)
+void TestCase_Sequence_cpp_CompareAgainstDifferentCompareSequence_WithSpecifiedSequenceSize_ExpectVariations()
+{
+	cout << "BEGIN TestCase_Sequence_cpp_CompareAgainstDifferentCompareSequence_WithSpecifiedSequenceSize_ExpectVariations" << endl << endl;
+
+	// Initialization
+	Sequence sequence, compareSequence;
+	sequence.Initialize(SEQUENCE_SPECIFIED, SEQUENCE_SIZE_SPECIFIED);
+	compareSequence.Initialize(SEQUENCE_SPECIFIED_VARIATIONS, SEQUENCE_SIZE_SPECIFIED);
+	cout << "// Initialization" << endl;
+	cout << "sequence = "; sequence.PrintSequence(); cout << endl;
+	cout << "compareSequence = "; compareSequence.PrintSequence(); cout << endl;
+	cout << endl;
+
+	// Test Implementation
+	cout << "// Test Implementation" << endl;
+	cout << "print variations (variations marked by brackets) = "; sequence.PrintVariations(compareSequence); cout << endl;
+	cout << endl;
+
+	// Expected Output
+	bool expectedVariations = true;
+	cout << "// Expected Output" << endl;
+	cout << "variations = " << (expectedVariations ? "TRUE" : "FALSE") << endl;
+	cout << endl;
+
+	// Actual Output
+	bool actualVariations = sequence.Compare(compareSequence);
+	cout << "// Actual Output" << endl;
+	cout << "variations = " << (actualVariations ? "TRUE" : "FALSE") << endl;
+	cout << endl;
+
+	// Test Case Status
+	cout << "// Test Case Status" << endl;
+	cout << "status = ";
+	if (actualVariations == expectedVariations)
+	{
+		cout << "PASS";
+	}
+
+	else
+	{
+		cout << "FAIL";
+	}
+	cout << endl;
+
+	cout << endl << "END TestCase_Sequence_cpp_CompareAgainstDifferentCompareSequence_WithSpecifiedSequenceSize_ExpectVariations" << endl << endl;
+}
+#endif
