@@ -1,2 +1,2 @@
-# DnaMatchingAndVariationDetection
-Basic C++ implementation of doing simple DNA sequence matching and variation detection. This software will serve as a baseline to compare performance numbers to the same functionalities implemented on a FPGA.
+# Hardware-Accelerated DNA Matching and Variation Detection Using a FPGA
+This project is part of a senior project being pursued at Cal Poly Pomona to use a FPGA to hardware-accelerate DNA sequence matching and variation detection. Software will be used to serve as a working performance baseline while the final implementation will be using Verilog to simulate hardware performance
