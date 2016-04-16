@@ -1,1 +1,4 @@
-# Hardware-Accelerated DNA Matching and Variation Detection Using a FPGA
+# Hardware-Accelerated DNA Sequence Matching and Variation Detection Using a FPGA
+The amount of research proving correlations between DNA sequences and important health concerns, such as cancer and other diseases, is significantly growing today. Software implementations exist and are ample enough to help doctors and researchers analyze this data. However, lots of these health conditions are time-sensitive, and so there is always the effort to decrease the amount of time needed to analyze DNA sequences in aspects like matching and detecting variations. Therefore, in our efforts to contribute to this important mission that benefits technology & society, we have decided to initiate a senior project to use an FPGA to hardware-accelerate this process.
+
+In this repository, there will be software and hardware implementations. The software, currently writtein in C++, will be used as a basis for performance measurements and comparisons while the hardware implementation, using Verilog HDL, will provide the modules needed to simulate DNA sequence matching and variation detection on an FPGA.
