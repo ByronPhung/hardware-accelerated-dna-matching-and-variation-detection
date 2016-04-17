@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Comparator.xst" -ofn "D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Comparator.syr" 

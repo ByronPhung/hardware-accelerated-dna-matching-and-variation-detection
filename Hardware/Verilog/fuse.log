@@ -1,0 +1,19 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Comparator_tf_isim_beh.exe -prj D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Comparator_tf_beh.prj work.Comparator_tf work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Comparator.v" into library work
+Analyzing Verilog file "D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Comparator_tf.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Comparator
+Compiling module Comparator_tf
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Comparator_tf_isim_beh.exe
+Fuse Memory Usage: 27608 KB
+Fuse CPU Usage: 311 ms
