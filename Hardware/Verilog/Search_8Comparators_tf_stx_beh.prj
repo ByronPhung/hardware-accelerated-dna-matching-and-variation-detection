@@ -1,0 +1,4 @@
+verilog isim_temp "Comparator.v"
+verilog isim_temp "Search_8Comparators.v"
+verilog isim_temp "Search_8Comparators_tf.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -27,7 +27,7 @@ module Comparator_tf;
 	// Inputs
 	reg clock;
 	reg [63:0] data;
-	reg [63:0] template;
+	reg [63:0] key;
 
 	// Outputs
 	wire match;
@@ -36,7 +36,7 @@ module Comparator_tf;
 	Comparator uut (
 		.clock(clock), 
 		.data(data), 
-		.template(template), 
+		.key(key), 
 		.match(match)
 	);
 	
@@ -49,17 +49,17 @@ module Comparator_tf;
 	initial begin
 		// Initialize 64-bit data and a template of the same 64-bit data.
 		// Expect: match = 1
-		data     = 64'b0010000011000111101000010111011010101010111110100110100111100111;
-		template = 64'b0010000011000111101000010111011010101010111110100110100111100111;
+		data = 64'b0010000011000111101000010111011010101010111110100110100111100111;
+		key  = 64'b0010000011000111101000010111011010101010111110100110100111100111;
 		@(posedge clock);
 		
 		// Change template to a different 64-bit data.
 		// Expect: match = 0
-		@(negedge clock) template = 64'b0010000011000110101000010111011010101010111110100110100111100111;
+		@(negedge clock) key = 64'b0010000011000110101000010111011010101010111110100110100111100111;
 		
 		// Change template to a smaller size.
 		// Expect: match = 0
-		@(negedge clock) template = 6'b001000;
+		@(negedge clock) key = 6'b001000;
 		
 		// Change data to same size as template and same data.
 		// Expect: match = 1

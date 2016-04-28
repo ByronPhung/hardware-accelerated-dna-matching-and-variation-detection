@@ -36,6 +36,35 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Comparator_tf_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Comparator_tf_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Comparator_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Search.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Search.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Search.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Search.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Search.xst"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Search_4Comparators.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Search_4Comparators.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Search_4Comparators.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Search_4Comparators.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Search_4Comparators.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Search_4Comparators.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Search_4Comparators.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Search_4Comparators.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Search_4Comparators_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Search_4Comparators_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Search_4Comparators_tf_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Search_4Comparators_tf_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Search_4Comparators_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="Search_8Comparators.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Search_8Comparators.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Search_8Comparators_tf_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Search_8Comparators_tf_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Search_8Comparators_tf_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Search_8Comparators_tf_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Search_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Search_envsettings.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Search_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Search_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Search_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
@@ -47,35 +76,37 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1460931011" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1460931011">
+    <transform xil_pn:end_ts="1461880460" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1461880460">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1460931011" xil_pn:in_ck="-8244084077941615247" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1460931011">
+    <transform xil_pn:end_ts="1461882714" xil_pn:in_ck="-2752888219375252565" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1461882714">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Comparator.v"/>
       <outfile xil_pn:name="Comparator_tf.v"/>
+      <outfile xil_pn:name="Search_4Comparators.v"/>
+      <outfile xil_pn:name="Search_4Comparators_tf.v"/>
+      <outfile xil_pn:name="Search_8Comparators.v"/>
+      <outfile xil_pn:name="Search_8Comparators_tf.v"/>
     </transform>
-    <transform xil_pn:end_ts="1460931011" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7014465235598142792" xil_pn:start_ts="1460931011">
+    <transform xil_pn:end_ts="1461882714" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-9028979340868606776" xil_pn:start_ts="1461882714">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1460931011" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7638093046071208054" xil_pn:start_ts="1460931011">
+    <transform xil_pn:end_ts="1461882714" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2135289356775166198" xil_pn:start_ts="1461882714">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1460931011" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1408156728880501719" xil_pn:start_ts="1460931011">
+    <transform xil_pn:end_ts="1461880460" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7083585537824179213" xil_pn:start_ts="1461880460">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1460931011" xil_pn:in_ck="-8244084077941615247" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1460931011">
+    <transform xil_pn:end_ts="1461882714" xil_pn:in_ck="-2752888219375252565" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1461882714">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -85,8 +116,12 @@
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Comparator.v"/>
       <outfile xil_pn:name="Comparator_tf.v"/>
+      <outfile xil_pn:name="Search_4Comparators.v"/>
+      <outfile xil_pn:name="Search_4Comparators_tf.v"/>
+      <outfile xil_pn:name="Search_8Comparators.v"/>
+      <outfile xil_pn:name="Search_8Comparators_tf.v"/>
     </transform>
-    <transform xil_pn:end_ts="1460931013" xil_pn:in_ck="-8244084077941615247" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4749600742509294097" xil_pn:start_ts="1460931011">
+    <transform xil_pn:end_ts="1461882716" xil_pn:in_ck="-2752888219375252565" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6854443175446529423" xil_pn:start_ts="1461882714">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -94,20 +129,20 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Comparator_tf_beh.prj"/>
-      <outfile xil_pn:name="Comparator_tf_isim_beh.exe"/>
+      <outfile xil_pn:name="Search_8Comparators_tf_beh.prj"/>
+      <outfile xil_pn:name="Search_8Comparators_tf_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1460931013" xil_pn:in_ck="-7865288709606869280" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8941604609439391764" xil_pn:start_ts="1460931013">
+    <transform xil_pn:end_ts="1461882716" xil_pn:in_ck="6903741993329972252" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="840121268215936340" xil_pn:start_ts="1461882716">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Comparator_tf_isim_beh.wdb"/>
+      <outfile xil_pn:name="Search_8Comparators_tf_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -115,52 +150,43 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1460929785" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5196538995265336239" xil_pn:start_ts="1460929785">
+    <transform xil_pn:end_ts="1461825277" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7909388830364898675" xil_pn:start_ts="1461825277">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1460929785" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="1408156728880501719" xil_pn:start_ts="1460929785">
+    <transform xil_pn:end_ts="1461825277" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7083585537824179213" xil_pn:start_ts="1461825277">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1460929785" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1460929785">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1460929785" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="2600316824756345999" xil_pn:start_ts="1460929785">
+    <transform xil_pn:end_ts="1461825277" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-3447914664956665717" xil_pn:start_ts="1461825277">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1460929785" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1460929785">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1460929785" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-3802884429056238751" xil_pn:start_ts="1460929785">
+    <transform xil_pn:end_ts="1461825277" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8239318376422515011" xil_pn:start_ts="1461825277">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1460929792" xil_pn:in_ck="3561547058503238428" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="8511579567377674078" xil_pn:start_ts="1460929785">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1461882996" xil_pn:in_ck="9067829073214482256" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="1847384710221017670" xil_pn:start_ts="1461882992">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <outfile xil_pn:name="Comparator.lso"/>
-      <outfile xil_pn:name="Comparator.ngc"/>
       <outfile xil_pn:name="Comparator.ngr"/>
-      <outfile xil_pn:name="Comparator.prj"/>
-      <outfile xil_pn:name="Comparator.stx"/>
-      <outfile xil_pn:name="Comparator.syr"/>
-      <outfile xil_pn:name="Comparator.xst"/>
-      <outfile xil_pn:name="Comparator_xst.xrpt"/>
+      <outfile xil_pn:name="Search_4Comparators.lso"/>
+      <outfile xil_pn:name="Search_4Comparators.ngc"/>
+      <outfile xil_pn:name="Search_4Comparators.ngr"/>
+      <outfile xil_pn:name="Search_4Comparators.prj"/>
+      <outfile xil_pn:name="Search_4Comparators.syr"/>
+      <outfile xil_pn:name="Search_4Comparators.xst"/>
+      <outfile xil_pn:name="Search_4Comparators_tf_stx_beh.prj"/>
+      <outfile xil_pn:name="Search_4Comparators_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>

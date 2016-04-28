@@ -1,0 +1,29 @@
+Command line:
+   Search_4Comparators_tf_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51045
+
+Thu Apr 28 15:26:32 2016
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 848.593 Meg
+
+ Total Signals          : 30
+ Total Nets             : 1364
+ Total Signal Drivers   : 18
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 27
+ Total Traceable Variables  : 32
+ Total Scalar Nets and Variables : 2803
+Total Line Count : 72
+
+ Total Simulation Time: 0.078125 sec
+
+ Current Memory Usage: 691.306 Meg
+
+Thu Apr 28 15:31:49 2016
+

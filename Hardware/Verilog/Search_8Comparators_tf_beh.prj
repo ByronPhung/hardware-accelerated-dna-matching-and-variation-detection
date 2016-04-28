@@ -1,0 +1,4 @@
+verilog work "Comparator.v"
+verilog work "Search_8Comparators.v"
+verilog work "Search_8Comparators_tf.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

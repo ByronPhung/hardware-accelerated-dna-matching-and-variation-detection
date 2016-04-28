@@ -1,0 +1,10 @@
+Command line:
+   Search_8Comparators_tf_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51060
+
+Thu Apr 28 15:32:49 2016
+
+
+ Elaboration Time: 0.03125 sec

@@ -1,0 +1,1098 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: Search_4Comparators.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Search_4Comparators.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Search_4Comparators"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Search_4Comparators
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Comparator.v" in library work
+Compiling verilog file "Search_4Comparators.v" in library work
+Module <Comparator> compiled
+Module <Search_4Comparators> compiled
+No errors in compilation
+Analysis of file <"Search_4Comparators.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Search_4Comparators> in library <work>.
+
+Analyzing hierarchy for module <Comparator> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Search_4Comparators>.
+WARNING:Xst:790 - "Search_4Comparators.v" line 107: Index value(s) does not match array range, simulation mismatch.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2046 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2045 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2044 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2043 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2042 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2041 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2040 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2039 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2038 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2037 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2036 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2035 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2034 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2033 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2032 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2031 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2030 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2029 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2028 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2027 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2026 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2025 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2024 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2023 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2022 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2021 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2020 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2019 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2018 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2017 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2016 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2015 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2014 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2013 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2012 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2011 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2010 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2009 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2008 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2007 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2006 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2005 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2004 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2003 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2002 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2001 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 2000 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1999 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1998 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1997 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1996 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1995 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1994 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1993 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1992 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1991 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1990 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1989 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1988 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1987 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1986 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1985 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1984 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1983 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1982 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1981 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1980 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1979 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1978 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1977 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1976 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1975 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1974 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1973 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1972 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1971 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1970 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1969 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1968 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1967 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1966 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1965 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1964 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1963 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1962 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1961 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1960 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1959 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1958 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1957 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1956 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1955 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1954 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1953 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1952 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1951 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1950 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1949 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1948 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1947 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1946 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1945 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1944 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1943 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1942 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1941 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1940 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1939 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1938 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1937 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1936 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1935 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1934 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1933 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1932 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1931 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1930 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1929 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1928 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1927 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1926 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1925 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1924 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1923 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1922 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1921 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1920 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1919 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1918 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1917 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1916 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1915 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1914 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1913 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1912 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1911 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1910 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1909 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1908 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1907 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1906 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1905 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1904 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1903 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1902 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1901 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1900 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1899 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1898 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1897 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1896 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1895 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1894 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1893 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1892 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1891 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1890 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1889 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1888 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1887 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1886 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1885 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1884 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1883 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1882 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1881 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1880 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1879 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1878 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1877 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1876 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1875 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1874 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1873 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1872 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1871 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1870 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1869 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1868 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1867 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1866 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1865 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1864 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1863 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1862 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1861 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1860 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1859 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1858 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1857 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1856 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1855 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1854 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1853 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1852 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1851 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1850 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1849 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1848 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1847 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1846 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1845 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1844 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1843 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1842 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1841 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1840 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1839 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1838 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1837 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1836 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1835 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1834 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1833 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1832 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1831 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1830 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1829 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1828 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1827 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1826 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1825 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1824 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1823 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1822 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1821 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1820 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1819 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1818 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1817 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1816 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1815 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1814 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1813 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1812 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1811 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1810 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1809 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1808 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1807 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1806 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1805 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1804 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1803 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1802 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1801 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1800 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1799 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1798 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1797 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1796 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1795 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1794 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1793 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1792 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1791 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1790 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1789 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1788 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1787 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1786 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1785 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1784 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1783 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1782 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1781 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1780 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1779 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1778 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1777 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1776 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1775 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1774 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1773 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1772 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1771 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1770 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1769 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1768 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1767 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1766 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1765 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1764 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1763 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1762 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1761 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1760 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1759 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1758 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1757 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1756 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1755 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1754 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1753 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1752 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1751 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1750 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1749 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1748 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1747 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1746 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1745 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1744 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1743 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1742 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1741 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1740 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1739 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1738 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1737 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1736 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1735 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1734 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1733 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1732 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1731 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1730 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1729 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1728 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1727 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1726 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1725 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1724 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1723 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1722 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1721 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1720 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1719 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1718 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1717 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1716 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1715 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1714 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1713 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1712 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1711 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1710 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1709 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1708 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1707 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1706 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1705 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1704 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1703 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1702 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1701 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1700 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1699 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1698 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1697 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1696 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1695 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1694 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1693 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1692 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1691 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1690 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1689 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1688 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1687 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1686 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1685 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1684 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1683 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1682 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1681 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1680 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1679 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1678 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1677 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1676 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1675 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1674 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1673 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1672 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1671 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1670 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1669 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1668 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1667 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1666 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1665 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1664 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1663 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1662 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1661 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1660 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1659 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1658 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1657 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1656 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1655 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1654 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1653 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1652 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1651 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1650 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1649 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1648 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1647 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1646 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1645 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1644 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1643 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1642 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1641 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1640 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1639 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1638 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1637 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1636 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1635 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1634 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1633 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1632 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1631 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1630 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1629 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1628 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1627 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1626 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1625 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1624 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1623 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1622 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1621 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1620 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1619 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1618 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1617 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1616 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1615 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1614 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1613 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1612 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1611 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1610 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1609 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1608 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1607 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1606 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1605 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1604 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1603 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1602 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1601 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1600 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1599 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1598 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1597 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1596 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1595 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1594 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1593 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1592 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1591 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1590 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1589 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1588 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1587 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1586 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1585 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1584 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1583 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1582 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1581 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1580 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1579 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1578 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1577 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1576 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1575 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1574 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1573 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1572 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1571 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1570 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1569 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1568 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1567 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1566 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1565 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1564 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1563 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1562 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1561 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1560 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1559 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1558 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1557 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1556 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1555 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1554 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1553 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1552 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1551 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1550 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1549 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1548 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1547 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1546 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1545 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1544 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1543 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1542 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1541 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1540 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1539 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1538 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1537 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1536 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1535 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1534 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1533 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1532 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1531 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1530 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1529 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1528 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1527 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1526 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1525 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1524 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1523 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1522 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1521 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1520 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1519 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1518 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1517 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1516 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1515 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1514 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1513 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1512 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1511 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1510 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1509 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1508 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1507 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1506 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1505 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1504 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1503 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1502 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1501 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1500 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1499 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1498 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1497 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1496 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1495 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1494 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1493 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1492 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1491 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1490 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1489 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1488 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1487 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1486 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1485 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1484 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1483 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1482 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1481 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1480 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1479 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1478 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1477 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1476 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1475 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1474 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1473 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1472 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1471 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1470 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1469 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1468 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1467 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1466 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1465 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1464 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1463 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1462 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1461 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1460 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1459 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1458 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1457 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1456 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1455 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1454 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1453 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1452 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1451 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1450 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1449 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1448 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1447 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1446 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1445 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1444 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1443 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1442 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1441 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1440 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1439 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1438 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1437 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1436 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1435 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1434 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1433 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1432 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1431 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1430 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1429 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1428 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1427 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1426 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1425 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1424 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1423 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1422 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1421 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1420 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1419 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1418 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1417 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1416 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1415 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1414 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1413 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1412 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1411 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1410 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1409 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1408 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1407 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1406 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1405 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1404 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1403 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1402 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1401 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1400 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1399 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1398 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1397 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1396 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1395 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1394 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1393 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1392 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1391 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1390 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1389 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1388 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1387 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1386 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1385 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1384 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1383 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1382 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1381 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1380 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1379 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1378 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1377 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1376 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1375 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1374 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1373 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1372 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1371 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1370 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1369 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1368 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1367 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1366 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1365 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1364 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1363 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1362 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1361 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1360 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1359 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1358 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1357 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1356 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1355 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1354 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1353 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1352 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1351 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1350 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1349 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1348 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1347 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1346 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1345 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1344 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1343 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1342 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1341 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1340 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1339 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1338 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1337 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1336 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1335 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1334 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1333 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1332 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1331 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1330 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1329 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1328 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1327 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1326 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1325 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1324 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1323 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1322 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1321 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1320 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1319 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1318 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1317 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1316 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1315 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1314 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1313 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1312 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1311 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1310 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1309 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1308 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1307 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1306 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1305 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1304 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1303 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1302 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1301 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1300 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1299 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1298 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1297 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1296 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1295 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1294 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1293 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1292 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1291 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1290 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1289 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1288 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1287 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1286 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1285 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1284 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1283 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1282 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1281 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1280 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1279 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1278 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1277 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1276 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1275 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1274 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1273 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1272 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1271 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1270 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1269 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1268 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1267 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1266 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1265 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1264 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1263 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1262 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1261 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1260 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1259 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1258 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1257 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1256 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1255 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1254 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1253 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1252 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1251 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1250 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1249 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1248 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1247 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1246 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1245 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1244 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1243 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1242 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1241 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1240 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1239 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1238 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1237 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1236 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1235 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1234 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1233 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1232 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1231 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1230 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1229 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1228 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1227 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1226 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1225 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1224 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1223 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1222 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1221 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1220 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1219 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1218 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1217 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1216 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1215 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1214 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1213 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1212 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1211 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1210 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1209 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1208 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1207 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1206 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1205 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1204 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1203 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1202 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1201 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1200 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1199 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1198 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1197 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1196 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1195 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1194 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1193 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1192 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1191 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1190 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1189 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1188 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1187 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1186 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1185 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1184 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1183 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1182 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1181 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1180 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1179 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1178 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1177 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1176 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1175 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1174 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1173 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1172 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1171 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1170 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1169 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1168 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1167 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1166 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1165 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1164 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1163 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1162 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1161 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1160 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1159 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1158 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1157 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1156 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1155 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1154 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1153 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1152 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1151 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1150 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1149 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1148 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1147 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1146 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1145 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1144 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1143 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1142 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1141 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1140 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1139 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1138 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1137 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1136 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1135 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1134 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1133 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1132 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1131 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1130 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1129 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1128 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1127 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1126 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1125 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1124 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1123 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1122 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1121 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1120 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1119 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1118 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1117 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1116 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1115 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1114 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1113 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1112 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1111 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1110 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1109 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1108 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1107 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1106 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1105 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1104 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1103 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1102 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1101 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1100 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1099 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1098 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1097 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1096 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1095 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1094 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1093 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1092 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1091 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1090 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1089 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1088 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1087 is not in range of signal <data>.
+ERROR:Xst:792 - "Search_4Comparators.v" line 107: Index 1086 is not in range of signal <data>.
+ 
+Found 961 error(s). Aborting synthesis.
+--> 
+
+Total memory usage is 292768 kilobytes
+
+Number of errors   :  961 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Search_8Comparators.v -lang verilog -prj Verilog -o Search_8Comparators.spl -module Search_8Comparators -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Search_8Comparators.spl D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Search_8Comparators.sym 

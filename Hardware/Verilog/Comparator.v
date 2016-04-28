@@ -19,23 +19,20 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Comparator(
-	input clock,
 	input [63:0] data,
 	input [63:0] key,
 	output reg match
 );
 
-reg temp_match;
-
-always @(posedge clock)
-	match <= temp_match;
-
+// Combinational Logic
 always @*
 begin
-	temp_match = 0;
+	// Default
+	match = 0;
 	
-	if (data == template)
-		temp_match = 1;
+	// If the key matches the data, then set the match to 1.
+	if (data == key)
+		match = 1;
 end
 
 endmodule

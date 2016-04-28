@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Documents/College/CalPolyPomona/SeniorProject/hardware-accelerated-dna-matching-and-variation-detection/Hardware/Verilog/Search_4Comparators_tf_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Search_4Comparators_tf" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/Search_4Comparators_tf/match" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">match</obj_property>
+      <obj_property name="ObjectShortName">match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/uut/counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">counter[6:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data[511:0]</obj_property>
+      <obj_property name="ObjectShortName">data[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/uut/data1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">data1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/uut/c1/match" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">match</obj_property>
+      <obj_property name="ObjectShortName">match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/uut/data2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">data2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/uut/c2/match" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">match</obj_property>
+      <obj_property name="ObjectShortName">match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/uut/data3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">data3[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/uut/c3/match" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">match</obj_property>
+      <obj_property name="ObjectShortName">match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/uut/data4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data4[63:0]</obj_property>
+      <obj_property name="ObjectShortName">data4[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/uut/c4/match" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">match</obj_property>
+      <obj_property name="ObjectShortName">match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Search_4Comparators_tf/key" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">key[63:0]</obj_property>
+      <obj_property name="ObjectShortName">key[63:0]</obj_property>
+   </wvobject>
+</wave_config>

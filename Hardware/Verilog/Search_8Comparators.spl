@@ -1,0 +1,11 @@
+[Inputs]
+clock
+reset
+=data[1023:0]=
+=key[63:0]=
+[Outputs]
+match
+[BiDir]
+[ATTRIBUTES]
+VeriModel Search_8Comparators
+
